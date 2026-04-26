@@ -197,7 +197,25 @@
                     android:contentDescription="Xtrenght" />
             </LinearLayout>
 
+            <LinearLayout
+                android:id="@+id/contenedorCarrito"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="80dp">
 
+                <Button
+                    android:id="@+id/btnAgregarCarrito"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ver más productos"
+                    android:layout_marginTop="16dp"
+                    android:backgroundTint="#6A4FB3"
+                    android:textColor="#FFFFFF"
+                    android:padding="12dp"/>
+
+            </LinearLayout>
 
 
             <!-- PRODUCTOS -->
@@ -344,21 +362,7 @@
                 </LinearLayout>
             </LinearLayout>
 
-            <LinearLayout
-                android:id="@+id/contenedorCarrito"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="16dp"
-                android:layout_marginBottom="80dp">
 
-                <Button
-                    android:id="@+id/btnAgregarCarrito"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Ver más productos" />
-
-            </LinearLayout>
 
         </LinearLayout>
     </ScrollView>

@@ -32,8 +32,11 @@ public class MainActivity extends AppCompatActivity {
         btnAgregarCarrito.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                contenedorCarrito.removeAllViews();
+
                 TextView productoAgregado = new TextView(MainActivity.this);
-                productoAgregado.setText("Más productos disponibles:\\nColágeno\\nBCAA\\nMultivitamínico");
+                productoAgregado.setText("prueba");
                 productoAgregado.setTextSize(16);
                 productoAgregado.setPadding(0, 12, 0, 0);
 
