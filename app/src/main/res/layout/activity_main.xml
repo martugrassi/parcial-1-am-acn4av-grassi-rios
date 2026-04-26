@@ -120,7 +120,7 @@
                     android:layout_weight="1"
                     android:layout_marginStart="8dp"
                     android:layout_marginEnd="8dp"
-                    android:src="@drawable/Promo"
+                    android:src="@drawable/promo"
                     android:scaleType="fitXY"/>
 
                 <ImageView
@@ -153,7 +153,7 @@
                     android:layout_width="42dp"
                     android:layout_height="42dp"
                     android:layout_marginEnd="12dp"
-                    android:src="@drawable/logoBSN"
+                    android:src="@drawable/logobsn"
                     android:scaleType="fitXY"
                     android:contentDescription="BSN" />
 
@@ -161,7 +161,7 @@
                     android:layout_width="42dp"
                     android:layout_height="42dp"
                     android:layout_marginEnd="12dp"
-                    android:src="@drawable/logoEna"
+                    android:src="@drawable/logoena"
                     android:scaleType="fitXY"
                     android:contentDescription="ENA" />
 
@@ -169,7 +169,7 @@
                     android:layout_width="42dp"
                     android:layout_height="42dp"
                     android:layout_marginEnd="12dp"
-                    android:src="@drawable/Logogentech"
+                    android:src="@drawable/logogentech"
                     android:scaleType="fitXY"
                     android:contentDescription="Gentech" />
 
@@ -177,7 +177,7 @@
                     android:layout_width="42dp"
                     android:layout_height="42dp"
                     android:layout_marginEnd="12dp"
-                    android:src="@drawable/LogoStar"
+                    android:src="@drawable/logostar"
                     android:scaleType="fitXY"
                     android:contentDescription="Star" />
 
@@ -185,7 +185,7 @@
                     android:layout_width="42dp"
                     android:layout_height="42dp"
                     android:layout_marginEnd="12dp"
-                    android:src="@drawable/MervickLogo"
+                    android:src="@drawable/mervicklogo"
                     android:scaleType="fitXY"
                     android:contentDescription="Mervick" />
 
@@ -196,6 +196,9 @@
                     android:scaleType="fitXY"
                     android:contentDescription="Xtrenght" />
             </LinearLayout>
+
+
+
 
             <!-- PRODUCTOS -->
             <LinearLayout
@@ -222,7 +225,7 @@
                         <ImageView
                             android:layout_width="72dp"
                             android:layout_height="72dp"
-                            android:src="@drawable/Creatina"
+                            android:src="@drawable/creatina"
                             android:scaleType="fitCenter"
                             android:contentDescription="Creatina" />
                     </LinearLayout>
@@ -253,7 +256,7 @@
                         <ImageView
                             android:layout_width="72dp"
                             android:layout_height="72dp"
-                            android:src="@drawable/Omega3"
+                            android:src="@drawable/omega3"
                             android:scaleType="fitCenter"
                             android:contentDescription="Omega 3" />
                     </LinearLayout>
@@ -294,7 +297,7 @@
                         <ImageView
                             android:layout_width="72dp"
                             android:layout_height="72dp"
-                            android:src="@drawable/PreEntreno"
+                            android:src="@drawable/preentreno"
                             android:scaleType="fitCenter"
                             android:contentDescription="Pre-entreno" />
                     </LinearLayout>
@@ -325,7 +328,7 @@
                         <ImageView
                             android:layout_width="72dp"
                             android:layout_height="72dp"
-                            android:src="@drawable/Proteina"
+                            android:src="@drawable/proteina"
                             android:scaleType="fitCenter"
                             android:contentDescription="Proteína" />
                     </LinearLayout>
@@ -339,6 +342,22 @@
                         android:textSize="14sp"
                         android:textStyle="bold" />
                 </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/contenedorCarrito"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="80dp">
+
+                <Button
+                    android:id="@+id/btnAgregarCarrito"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ver más productos" />
+
             </LinearLayout>
 
         </LinearLayout>
@@ -448,6 +467,7 @@
                 android:textSize="11sp"
                 android:layout_marginTop="4dp" />
         </LinearLayout>
+
 
     </LinearLayout>
 
