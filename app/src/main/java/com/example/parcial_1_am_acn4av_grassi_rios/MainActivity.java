@@ -31,6 +31,19 @@ public class MainActivity extends AppCompatActivity {
         ImageView imgProgreso = findViewById(R.id.imgProgreso);
         ImageView imgPedidos = findViewById(R.id.imgPedidos);
 
+        ImageView imgMenu = findViewById(R.id.imgMenu);
+        ImageView imgCart = findViewById(R.id.imgCart);
+        ImageView imgPromo = findViewById(R.id.imgPromo);
+
+        ImageView imgCreatina = findViewById(R.id.imgCreatina);
+        ImageView imgOmega = findViewById(R.id.imgomega);
+        ImageView imgPreentreno = findViewById(R.id.imgpreentreno);
+        ImageView imgProteina = findViewById(R.id.imgproteina);
+
+
+
+        // NAVBAR
+
         imgPromociones.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -56,6 +69,64 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this, "Acceso a pedidos", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+// HEADER
+
+        imgMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Menú principal", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        imgCart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Carrito de compras", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+// PROMO
+
+        imgPromo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Promociones disponibles", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+// PRODUCTOS
+
+        imgCreatina.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Producto seleccionado: Creatina", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        imgOmega.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Producto seleccionado: Omega 3", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        imgPreentreno.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Producto seleccionado: Pre-entreno", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        imgProteina.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Producto seleccionado: Proteína", Toast.LENGTH_SHORT).show();
             }
         });
     }

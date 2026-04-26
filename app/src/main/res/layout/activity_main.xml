@@ -103,37 +103,44 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="16dp"
                 android:orientation="horizontal"
                 android:gravity="center_vertical">
 
                 <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
                     android:src="@drawable/flecha"
-                    android:rotation="180"
-                    android:layout_marginStart="8dp"/>
+                    android:rotation="90"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="4dp"
+                    android:contentDescription="Anterior" />
 
                 <ImageView
+                    android:id="@+id/imgPromo"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginEnd="8dp"
                     android:src="@drawable/promo"
-                    android:scaleType="fitXY"/>
+                    android:scaleType="fitXY"
+                    android:background="@drawable/fondo_banner"
+                    android:clipToOutline="true" />
 
                 <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
                     android:src="@drawable/flecha"
-                    android:layout_marginEnd="8dp"/>
+                    android:rotation="-90"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:contentDescription="Siguiente" />
+
             </LinearLayout>
 
             <!-- FLECHAS / INDICADOR -->
             <ImageView
-                android:layout_width="52dp"
-                android:layout_height="12dp"
+                android:layout_width="70dp"
+                android:layout_height="18dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="10dp"
                 android:contentDescription="Indicador"
@@ -204,7 +211,8 @@
                 android:orientation="horizontal"
                 android:paddingStart="24dp"
                 android:paddingTop="24dp"
-                android:paddingEnd="24dp">
+                android:paddingEnd="24dp"
+                android:layout_marginBottom="12dp">
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -214,17 +222,19 @@
                     android:orientation="vertical">
 
                     <LinearLayout
-                        android:layout_width="108dp"
-                        android:layout_height="108dp"
-                        android:background="#EDEDED"
+                        android:layout_width="118dp"
+                        android:layout_height="118dp"
+                        android:background="@drawable/fondo_redondeado"
                         android:gravity="center">
 
                         <ImageView
-                            android:layout_width="72dp"
-                            android:layout_height="72dp"
+                            android:id="@+id/imgCreatina"
+                            android:layout_width="86dp"
+                            android:layout_height="86dp"
                             android:src="@drawable/creatina"
                             android:scaleType="fitCenter"
-                            android:contentDescription="Creatina" />
+                            android:contentDescription="Creatina"
+                            android:clipToOutline="true"/>
                     </LinearLayout>
 
                     <TextView
@@ -245,17 +255,19 @@
                     android:orientation="vertical">
 
                     <LinearLayout
-                        android:layout_width="108dp"
-                        android:layout_height="108dp"
-                        android:background="#EDEDED"
+                        android:layout_width="118dp"
+                        android:layout_height="118dp"
+                        android:background="@drawable/fondo_redondeado"
                         android:gravity="center">
 
                         <ImageView
-                            android:layout_width="72dp"
-                            android:layout_height="72dp"
+                            android:id="@+id/imgomega"
+                            android:layout_width="86dp"
+                            android:layout_height="86dp"
                             android:src="@drawable/omega3"
                             android:scaleType="fitCenter"
-                            android:contentDescription="Omega 3" />
+                            android:contentDescription="Omega 3"
+                            android:clipToOutline="true"/>
                     </LinearLayout>
 
                     <TextView
@@ -286,17 +298,19 @@
                     android:orientation="vertical">
 
                     <LinearLayout
-                        android:layout_width="108dp"
-                        android:layout_height="108dp"
-                        android:background="#EDEDED"
+                        android:layout_width="118dp"
+                        android:layout_height="118dp"
+                        android:background="@drawable/fondo_redondeado"
                         android:gravity="center">
 
                         <ImageView
-                            android:layout_width="72dp"
-                            android:layout_height="72dp"
+                            android:id="@+id/imgpreentreno"
+                            android:layout_width="86dp"
+                            android:layout_height="86dp"
                             android:src="@drawable/preentreno"
                             android:scaleType="fitCenter"
-                            android:contentDescription="Pre-entreno" />
+                            android:contentDescription="Pre-entreno"
+                            android:clipToOutline="true"/>
                     </LinearLayout>
 
                     <TextView
@@ -317,17 +331,19 @@
                     android:orientation="vertical">
 
                     <LinearLayout
-                        android:layout_width="108dp"
-                        android:layout_height="108dp"
-                        android:background="#EDEDED"
+                        android:layout_width="118dp"
+                        android:layout_height="118dp"
+                        android:background="@drawable/fondo_redondeado"
                         android:gravity="center">
 
                         <ImageView
-                            android:layout_width="72dp"
-                            android:layout_height="72dp"
+                            android:id="@+id/imgproteina"
+                            android:layout_width="86dp"
+                            android:layout_height="86dp"
                             android:src="@drawable/proteina"
                             android:scaleType="fitCenter"
-                            android:contentDescription="Proteína" />
+                            android:contentDescription="Proteína"
+                            android:clipToOutline="true"/>
                     </LinearLayout>
 
                     <TextView
