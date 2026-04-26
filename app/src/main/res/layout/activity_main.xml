@@ -197,27 +197,6 @@
                     android:contentDescription="Xtrenght" />
             </LinearLayout>
 
-            <LinearLayout
-                android:id="@+id/contenedorCarrito"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="16dp"
-                android:layout_marginBottom="80dp">
-
-                <Button
-                    android:id="@+id/btnAgregarCarrito"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Ver más productos"
-                    android:layout_marginTop="16dp"
-                    android:backgroundTint="#6A4FB3"
-                    android:textColor="#FFFFFF"
-                    android:padding="12dp"/>
-
-            </LinearLayout>
-
-
             <!-- PRODUCTOS -->
             <LinearLayout
                 android:layout_width="match_parent"
@@ -389,6 +368,7 @@
             android:orientation="vertical">
 
             <ImageView
+                android:id="@+id/imgInicio"
                 android:layout_width="22dp"
                 android:layout_height="22dp"
                 android:src="@drawable/inicio"
@@ -412,6 +392,7 @@
             android:orientation="vertical">
 
             <ImageView
+                android:id="@+id/imgProgreso"
                 android:layout_width="22dp"
                 android:layout_height="22dp"
                 android:src="@drawable/gimnasia"
@@ -435,6 +416,7 @@
             android:orientation="vertical">
 
             <ImageView
+                android:id="@+id/imgPromociones"
                 android:layout_width="22dp"
                 android:layout_height="22dp"
                 android:src="@drawable/promociones"
@@ -458,6 +440,7 @@
             android:orientation="vertical">
 
             <ImageView
+                android:id="@+id/imgPedidos"
                 android:layout_width="22dp"
                 android:layout_height="22dp"
                 android:src="@drawable/cesta"

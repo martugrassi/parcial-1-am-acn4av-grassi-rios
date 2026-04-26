@@ -9,9 +9,9 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import android.view.View;
-import android.widget.Button;
-import android.widget.LinearLayout;
-import android.widget.TextView;
+import android.widget.ImageView;
+import android.widget.Toast;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,21 +26,36 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        Button btnAgregarCarrito = findViewById(R.id.btnAgregarCarrito);
-        LinearLayout contenedorCarrito = findViewById(R.id.contenedorCarrito);
+        ImageView imgPromociones = findViewById(R.id.imgPromociones);
+        ImageView imgInicio = findViewById(R.id.imgInicio);
+        ImageView imgProgreso = findViewById(R.id.imgProgreso);
+        ImageView imgPedidos = findViewById(R.id.imgPedidos);
 
-        btnAgregarCarrito.setOnClickListener(new View.OnClickListener() {
+        imgPromociones.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Acceso a promociones", Toast.LENGTH_SHORT).show();
+            }
+        });
 
-                contenedorCarrito.removeAllViews();
+        imgInicio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Acceso a inicio", Toast.LENGTH_SHORT).show();
+            }
+        });
 
-                TextView productoAgregado = new TextView(MainActivity.this);
-                productoAgregado.setText("prueba");
-                productoAgregado.setTextSize(16);
-                productoAgregado.setPadding(0, 12, 0, 0);
+        imgProgreso.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Acceso a progreso", Toast.LENGTH_SHORT).show();
+            }
+        });
 
-                contenedorCarrito.addView(productoAgregado);
+        imgPedidos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Acceso a pedidos", Toast.LENGTH_SHORT).show();
             }
         });
     }
