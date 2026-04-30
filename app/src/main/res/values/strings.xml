@@ -1,3 +1,19 @@
 <resources>
-    <string name="app_name">Parcial-1-am-acn4av-grassi-rios</string>
+    <string name="app_name">FitMarket</string>
+    <string name="direccion">Avenida Rivadavia 4370</string>
+
+    <string name="inicio">Inicio</string>
+    <string name="progreso">Progreso</string>
+    <string name="promociones">Promociones</string>
+    <string name="pedidos">Pedidos</string>
+
+    <string name="creatina">Creatina</string>
+    <string name="omega_3">Omega-3</string>
+    <string name="pre_entreno">Pre-entreno</string>
+    <string name="proteina">Proteína</string>
+
+    <string name="menu">Menu</string>
+    <string name="carrito">Carrito</string>
+    <string name="buscar">Buscar</string>
+    <string name="ubicacion">Ubicación</string>
 </resources>

@@ -1,0 +1,27 @@
+<resources>
+
+    <!-- ESPACIADOS -->
+    <dimen name="padding_screen">16dp</dimen>
+
+    <!-- HEADER -->
+    <dimen name="header_height">56dp</dimen>
+    <dimen name="search_height">38dp</dimen>
+    <dimen name="icon_header_size">24dp</dimen>
+    <dimen name="icon_small_size">18dp</dimen>
+
+    <!-- NAVBAR -->
+    <dimen name="navbar_height">62dp</dimen>
+    <dimen name="icon_nav_size">22dp</dimen>
+
+    <!-- BANNER -->
+    <dimen name="banner_height">150dp</dimen>
+
+    <!-- PRODUCTOS -->
+    <dimen name="product_card_size">118dp</dimen>
+    <dimen name="product_image_size">86dp</dimen>
+
+    <!-- TEXTOS -->
+    <dimen name="text_nav_size">11sp</dimen>
+    <dimen name="text_product_size">14sp</dimen>
+
+</resources>
