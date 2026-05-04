@@ -24,9 +24,10 @@
             android:orientation="vertical">
 
             <!-- HEADER NEGRO -->
+            <!-- HEADER PRINCIPAL -->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="56dp"
+                android:layout_height="58dp"
                 android:background="@drawable/bg_header_red"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
@@ -35,22 +36,22 @@
 
                 <ImageView
                     android:id="@+id/imgMenu"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
                     android:contentDescription="Menu"
                     android:src="@drawable/lista" />
 
                 <LinearLayout
                     android:layout_width="0dp"
-                    android:layout_height="38dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginEnd="16dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginEnd="14dp"
                     android:layout_weight="1"
                     android:background="@drawable/bg_search_rounded"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
-                    android:paddingStart="12dp"
-                    android:paddingEnd="12dp">
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp">
 
                     <TextView
                         android:layout_width="0dp"
@@ -58,7 +59,7 @@
                         android:layout_weight="1"
                         android:text="Buscar productos..."
                         android:textColor="#999999"
-                        android:textSize="14sp" />
+                        android:textSize="13sp" />
 
                     <ImageView
                         android:layout_width="18dp"
@@ -69,8 +70,8 @@
 
                 <ImageView
                     android:id="@+id/imgCart"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
                     android:contentDescription="Carrito"
                     android:src="@drawable/carro" />
             </LinearLayout>
@@ -200,169 +201,195 @@
             </LinearLayout>
 
 
-    <!-- PRODUCTOS -->
+    <!-- PRODUCTOS RECOMENDADOS -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:paddingStart="16dp"
+        android:paddingTop="20dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="20dp">
 
-        <!-- FILA 1 -->
+        <!-- Título -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="16dp">
-
-            <!-- CREATINA -->
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:background="@drawable/bg_product_card"
-                android:padding="12dp"
-                android:layout_marginEnd="8dp">
-
-                <ImageView
-                    android:id="@+id/imgCreatina"
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:src="@drawable/creatina"
-                    android:scaleType="fitCenter"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Creatina"
-                    android:textSize="14sp"
-                    android:textStyle="bold"
-                    android:layout_marginTop="8dp"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Mejora tu rendimiento"
-                    android:textSize="12sp"
-                    android:background="@drawable/bg_chip_product"
-                    android:padding="6dp"
-                    android:layout_marginTop="6dp"/>
-            </LinearLayout>
-
-            <!-- OMEGA -->
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:background="@drawable/bg_product_card"
-                android:padding="12dp"
-                android:layout_marginStart="8dp">
-
-                <ImageView
-                    android:id="@+id/imgomega"
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:src="@drawable/omega3"
-                    android:scaleType="fitCenter"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Omega-3"
-                    android:textSize="14sp"
-                    android:textStyle="bold"
-                    android:layout_marginTop="8dp"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Salud cardiovascular"
-                    android:textSize="12sp"
-                    android:background="@drawable/bg_chip_product"
-                    android:padding="6dp"
-                    android:layout_marginTop="6dp"/>
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <!-- FILA 2 -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
             android:orientation="horizontal">
 
-            <!-- PREENTRENO -->
-            <LinearLayout
+            <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:orientation="vertical"
-                android:background="@drawable/bg_product_card"
-                android:padding="12dp"
-                android:layout_marginEnd="8dp">
+                android:text="Productos recomendados"
+                android:textColor="#111111"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
-                <ImageView
-                    android:id="@+id/imgpreentreno"
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:src="@drawable/preentreno"
-                    android:scaleType="fitCenter"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Pre-entreno"
-                    android:textSize="14sp"
-                    android:textStyle="bold"
-                    android:layout_marginTop="8dp"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Energía y enfoque"
-                    android:textSize="12sp"
-                    android:background="@drawable/bg_chip_product"
-                    android:padding="6dp"
-                    android:layout_marginTop="6dp"/>
-            </LinearLayout>
-
-            <!-- PROTEINA -->
-            <LinearLayout
-                android:layout_width="0dp"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:background="@drawable/bg_product_card"
-                android:padding="12dp"
-                android:layout_marginStart="8dp">
-
-                <ImageView
-                    android:id="@+id/imgproteina"
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:src="@drawable/proteina"
-                    android:scaleType="fitCenter"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Proteína"
-                    android:textSize="14sp"
-                    android:textStyle="bold"
-                    android:layout_marginTop="8dp"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Desarrollo muscular"
-                    android:textSize="12sp"
-                    android:background="@drawable/bg_chip_product"
-                    android:padding="6dp"
-                    android:layout_marginTop="6dp"/>
-            </LinearLayout>
-
+                android:text="Ver todos"
+                android:textColor="#FF3B30"
+                android:textSize="13sp"
+                android:textStyle="bold" />
         </LinearLayout>
+
+        <!-- Scroll horizontal -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- CREATINA -->
+                <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/bg_product_card"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <ImageView
+                        android:id="@+id/imgCreatina"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:src="@drawable/creatina"
+                        android:scaleType="fitCenter" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Creatina"
+                        android:textColor="#111111"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:background="@drawable/bg_chip_product"
+                        android:padding="6dp"
+                        android:text="Rendimiento"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <!-- OMEGA -->
+                <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/bg_product_card"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <ImageView
+                        android:id="@+id/imgomega"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:src="@drawable/omega3"
+                        android:scaleType="fitCenter" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Omega-3"
+                        android:textColor="#111111"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:background="@drawable/bg_chip_product"
+                        android:padding="6dp"
+                        android:text="Salud"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <!-- PRE ENTRENO -->
+                <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/bg_product_card"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <ImageView
+                        android:id="@+id/imgpreentreno"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:src="@drawable/preentreno"
+                        android:scaleType="fitCenter" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Pre-entreno"
+                        android:textColor="#111111"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:background="@drawable/bg_chip_product"
+                        android:padding="6dp"
+                        android:text="Energía"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <!-- PROTEINA -->
+                <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:background="@drawable/bg_product_card"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <ImageView
+                        android:id="@+id/imgproteina"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:src="@drawable/proteina"
+                        android:scaleType="fitCenter" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Proteína"
+                        android:textColor="#111111"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:background="@drawable/bg_chip_product"
+                        android:padding="6dp"
+                        android:text="Músculo"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </HorizontalScrollView>
 
     </LinearLayout>
 
@@ -394,13 +421,14 @@
                 android:layout_width="22dp"
                 android:layout_height="22dp"
                 android:src="@drawable/inicio"
+                app:tint="#FF3B30"
                 android:contentDescription="Inicio" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Inicio"
-                android:textColor="#FFFFFF"
+                android:textColor="#FF3B30"
                 android:textSize="11sp"
                 android:layout_marginTop="4dp" />
         </LinearLayout>
