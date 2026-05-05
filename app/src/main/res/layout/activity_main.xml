@@ -285,6 +285,24 @@
                         android:layout_gravity="center_horizontal"
                         android:gravity="center"
                         android:textSize="12sp" />
+
+
+                    <Button
+                        android:id="@+id/btnAgregarCreatina"
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:backgroundTint="#FF3B30"
+                        android:text="Agregar"
+                        android:textColor="#FFFFFF"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:minHeight="0dp"
+                        android:minWidth="0dp" />
+
                 </LinearLayout>
 
                 <!-- OMEGA -->
@@ -324,6 +342,22 @@
                         android:layout_gravity="center_horizontal"
                         android:gravity="center"
                         android:textSize="12sp" />
+
+                    <Button
+                        android:id="@+id/btnAgregarOmega"
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:backgroundTint="#FF3B30"
+                        android:text="Agregar"
+                        android:textColor="#FFFFFF"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:minHeight="0dp"
+                        android:minWidth="0dp" />
                 </LinearLayout>
 
                 <!-- PRE ENTRENO -->
@@ -363,6 +397,23 @@
                         android:layout_gravity="center_horizontal"
                         android:gravity="center"
                         android:textSize="12sp" />
+
+                    <Button
+                        android:id="@+id/btnAgregarPreentreno"
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:backgroundTint="#FF3B30"
+                        android:text="Agregar"
+                        android:textColor="#FFFFFF"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:minHeight="0dp"
+                        android:minWidth="0dp" />
+
                 </LinearLayout>
 
                 <!-- PROTEINA -->
@@ -402,6 +453,22 @@
                         android:layout_gravity="center_horizontal"
                         android:gravity="center"
                         android:textSize="12sp" />
+
+                    <Button
+                        android:id="@+id/btnAgregarProteina"
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:backgroundTint="#FF3B30"
+                        android:text="Agregar"
+                        android:textColor="#FFFFFF"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:minHeight="0dp"
+                        android:minWidth="0dp" />
                 </LinearLayout>
 
             </LinearLayout>
