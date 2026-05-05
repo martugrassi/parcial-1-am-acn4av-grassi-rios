@@ -470,9 +470,32 @@
                         android:minHeight="0dp"
                         android:minWidth="0dp" />
                 </LinearLayout>
-
             </LinearLayout>
         </HorizontalScrollView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="Carrito"
+            android:textColor="#111111"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Productos agregados:"
+            android:textColor="#555555"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:id="@+id/contenedorCarrito"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical" />
 
     </LinearLayout>
 
