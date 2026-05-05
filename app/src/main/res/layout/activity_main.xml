@@ -269,6 +269,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:text="Creatina"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center"
                         android:textColor="#111111"
                         android:textSize="14sp"
                         android:textStyle="bold" />
@@ -280,6 +282,8 @@
                         android:background="@drawable/bg_chip_product"
                         android:padding="6dp"
                         android:text="Rendimiento"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center"
                         android:textSize="12sp" />
                 </LinearLayout>
 
@@ -304,6 +308,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:text="Omega-3"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center"
                         android:textColor="#111111"
                         android:textSize="14sp"
                         android:textStyle="bold" />
@@ -315,6 +321,8 @@
                         android:background="@drawable/bg_chip_product"
                         android:padding="6dp"
                         android:text="Salud"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center"
                         android:textSize="12sp" />
                 </LinearLayout>
 
@@ -339,6 +347,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:text="Pre-entreno"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center"
                         android:textColor="#111111"
                         android:textSize="14sp"
                         android:textStyle="bold" />
@@ -350,6 +360,8 @@
                         android:background="@drawable/bg_chip_product"
                         android:padding="6dp"
                         android:text="Energía"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center"
                         android:textSize="12sp" />
                 </LinearLayout>
 
@@ -374,6 +386,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:text="Proteína"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center"
                         android:textColor="#111111"
                         android:textSize="14sp"
                         android:textStyle="bold" />
@@ -385,6 +399,8 @@
                         android:background="@drawable/bg_chip_product"
                         android:padding="6dp"
                         android:text="Músculo"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center"
                         android:textSize="12sp" />
                 </LinearLayout>
 
