@@ -12,6 +12,10 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -40,7 +44,12 @@ public class MainActivity extends AppCompatActivity {
         ImageView imgPreentreno = findViewById(R.id.imgpreentreno);
         ImageView imgProteina = findViewById(R.id.imgproteina);
 
+        Button btnAgregarCreatina = findViewById(R.id.btnAgregarCreatina);
+        Button btnAgregarOmega = findViewById(R.id.btnAgregarOmega);
+        Button btnAgregarPreentreno = findViewById(R.id.btnAgregarPreentreno);
+        Button btnAgregarProteina = findViewById(R.id.btnAgregarProteina);
 
+        LinearLayout contenedorCarrito = findViewById(R.id.contenedorCarrito);
 
         // NAVBAR
 
@@ -129,5 +138,46 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "Producto seleccionado: Proteína", Toast.LENGTH_SHORT).show();
             }
         });
+
+        btnAgregarCreatina.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                agregarProducto(contenedorCarrito, "Creatina");
+            }
+        });
+
+        btnAgregarOmega.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                agregarProducto(contenedorCarrito, "Omega-3");
+            }
+        });
+
+        btnAgregarPreentreno.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                agregarProducto(contenedorCarrito, "Pre-entreno");
+            }
+        });
+
+        btnAgregarProteina.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                agregarProducto(contenedorCarrito, "Proteína");
+            }
+        });
+
+    }
+
+    private void agregarProducto(LinearLayout contenedor, String producto) {
+        TextView nuevoProducto = new TextView(this);
+
+        nuevoProducto.setText("Producto agregado: " + producto);
+        nuevoProducto.setTextSize(14);
+        nuevoProducto.setPadding(16, 12, 16, 12);
+
+        contenedor.addView(nuevoProducto);
+
+        Toast.makeText(this, producto + " agregado al carrito", Toast.LENGTH_SHORT).show();
     }
 }
