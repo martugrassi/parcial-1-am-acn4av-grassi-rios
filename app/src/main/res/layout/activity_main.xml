@@ -123,7 +123,12 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginEnd="8dp"
                     android:src="@drawable/promocionesbanner"
-                    android:scaleType="centerCrop"/>
+                    android:scaleType="centerCrop"
+
+                    android:background="@drawable/fondo_redondeado"
+                    android:clipToOutline="true"
+
+                    />
 
                 <ImageView
                     android:layout_width="24dp"
