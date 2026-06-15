@@ -105,7 +105,7 @@
             android:id="@+id/txtTotalProductos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Total productos: 0"
+            android:text="Subtotal\n0 productos agregados"
             android:textColor="#111111"
             android:textSize="16sp"
             android:textStyle="bold" />

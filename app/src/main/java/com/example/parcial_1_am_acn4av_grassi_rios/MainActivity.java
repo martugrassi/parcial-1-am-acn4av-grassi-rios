@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     private HashMap<String, Integer> posicionesBotones = new HashMap<>();
     private HashMap<String, LinearLayout> contadoresProducto = new HashMap<>();
     private TextView txtResumenCarritoInicio;
+    private TextView txtBadgeCarrito;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
         Button btnAgregarProteina = findViewById(R.id.btnAgregarProteina);
 
         txtResumenCarritoInicio = findViewById(R.id.txtResumenCarritoInicio);
+        txtBadgeCarrito = findViewById(R.id.txtBadgeCarrito);
 
         configurarProducto(btnAgregarCreatina, "Creatina");
         configurarProducto(btnAgregarOmega, "Omega-3");
@@ -257,15 +259,22 @@ public class MainActivity extends AppCompatActivity {
         return contador;
     }
 
+
     private void actualizarResumenCarritoInicio() {
         int total = CarritoManager.obtenerTotalProductos();
 
         if (total == 0) {
             txtResumenCarritoInicio.setText("Continua agregando productos...");
-        } else if (total == 1) {
-            txtResumenCarritoInicio.setText("Tenés 1 producto agregado en el carrito");
+            txtBadgeCarrito.setVisibility(View.GONE);
         } else {
-            txtResumenCarritoInicio.setText("Tenés " + total + " productos agregados en el carrito");
+            txtBadgeCarrito.setVisibility(View.VISIBLE);
+            txtBadgeCarrito.setText(String.valueOf(total));
+
+            if (total == 1) {
+                txtResumenCarritoInicio.setText("Tenés 1 producto agregado en el carrito");
+            } else {
+                txtResumenCarritoInicio.setText("Tenés " + total + " productos agregados en el carrito");
+            }
         }
     }
 

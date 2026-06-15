@@ -68,12 +68,32 @@
                         android:src="@drawable/lupa" />
                 </LinearLayout>
 
-                <ImageView
-                    android:id="@+id/imgCart"
-                    android:layout_width="26dp"
-                    android:layout_height="26dp"
-                    android:contentDescription="Carrito"
-                    android:src="@drawable/carro" />
+
+                <FrameLayout
+                    android:layout_width="32dp"
+                    android:layout_height="32dp">
+
+                    <ImageView
+                        android:id="@+id/imgCart"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="Carrito"
+                        android:src="@drawable/carro" />
+
+                    <TextView
+                        android:id="@+id/txtBadgeCarrito"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="top|end"
+                        android:background="@drawable/bg_badge_carrito"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="#FFFFFF"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+                </FrameLayout>
             </LinearLayout>
 
             <LinearLayout

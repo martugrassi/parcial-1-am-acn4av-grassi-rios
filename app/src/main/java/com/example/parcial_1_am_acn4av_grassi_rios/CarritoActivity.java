@@ -46,10 +46,14 @@ public class CarritoActivity extends AppCompatActivity {
         imgVolverCarrito.setOnClickListener(v -> finish());
 
         btnFinalizarCompra.setOnClickListener(v -> {
-            if (CarritoManager.obtenerTotalProductos() == 0) {
+            int total = CarritoManager.obtenerTotalProductos();
+
+            if (total == 0) {
                 Toast.makeText(this, "El carrito está vacío", Toast.LENGTH_SHORT).show();
+            } else if (total == 1) {
+                Toast.makeText(this, "Compra finalizada: 1 producto", Toast.LENGTH_SHORT).show();
             } else {
-                Toast.makeText(this, "Compra finalizada correctamente", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Compra finalizada: " + total + " productos", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -60,7 +64,12 @@ public class CarritoActivity extends AppCompatActivity {
         contenedorProductosCarrito.removeAllViews();
 
         int total = CarritoManager.obtenerTotalProductos();
-        txtTotalProductos.setText("Total productos: " + total);
+
+        if (total == 1) {
+            txtTotalProductos.setText("Subtotal\n1 producto agregado");
+        } else {
+            txtTotalProductos.setText("Subtotal\n" + total + " productos agregados");
+        }
 
         if (total == 0) {
             txtCarritoVacio.setVisibility(View.VISIBLE);
