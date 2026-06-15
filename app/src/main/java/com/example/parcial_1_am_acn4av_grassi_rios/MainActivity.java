@@ -268,7 +268,11 @@ public class MainActivity extends AppCompatActivity {
             txtBadgeCarrito.setVisibility(View.GONE);
         } else {
             txtBadgeCarrito.setVisibility(View.VISIBLE);
-            txtBadgeCarrito.setText(String.valueOf(total));
+            if (total > 99) {
+                txtBadgeCarrito.setText("99+");
+            } else {
+                txtBadgeCarrito.setText(String.valueOf(total));
+            }
 
             if (total == 1) {
                 txtResumenCarritoInicio.setText("Tenés 1 producto agregado en el carrito");

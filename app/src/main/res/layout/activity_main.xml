@@ -70,8 +70,10 @@
 
 
                 <FrameLayout
-                    android:layout_width="32dp"
-                    android:layout_height="32dp">
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:clipChildren="false"
+                    android:clipToPadding="false">
 
                     <ImageView
                         android:id="@+id/imgCart"
@@ -86,13 +88,18 @@
                         android:layout_width="18dp"
                         android:layout_height="18dp"
                         android:layout_gravity="top|end"
+                        android:translationX="2dp"
+                        android:translationY="-0dp"
                         android:background="@drawable/bg_badge_carrito"
                         android:gravity="center"
                         android:text="0"
                         android:textColor="#FFFFFF"
                         android:textSize="10sp"
                         android:textStyle="bold"
-                        android:visibility="gone" />
+                        android:visibility="gone"
+                        />
+
+
                 </FrameLayout>
             </LinearLayout>
 
