@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/color_fondo_app">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:clipChildren="false"
+        android:clipToPadding="false">
+
+        <!-- HEADER ROJO -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/login_header_height"
+            android:background="@drawable/bg_header_red"
+            android:clipChildren="false"
+            android:clipToPadding="false">
+
+            <ImageView
+                android:id="@+id/imgLogo"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_marginBottom="-50dp"
+                android:elevation="8dp"
+                android:background="@drawable/bg_circulo_blanco"
+                android:padding="12dp"
+                android:src="@drawable/logobsn" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="bottom"
+                android:scaleType="fitXY"
+                android:src="@drawable/bg_header_curve_overlay"/>
+
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="34dp"
+            android:text="@string/bienvenida_registro"
+            android:textSize="@dimen/text_title_size"
+            android:textStyle="bold"
+            android:textColor="@color/color_texto_principal"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="4dp"
+            android:text="@string/subtitulo_registro"
+            android:textSize="@dimen/text_subtitle_size"
+            android:textColor="@color/color_texto_gris_claro"/>
+
+        <!-- CARD -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/padding_screen"
+            android:background="@drawable/bg_card_white"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- TABS -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:id="@+id/tabLogin"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:text="@string/tab_iniciar_sesion"
+                    android:textColor="@color/color_texto_gris_claro"/>
+
+                <TextView
+                    android:id="@+id/tabRegistro"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:text="@string/tab_crear_cuenta"
+                    android:textStyle="bold"
+                    android:textColor="@color/color_rojo_principal"
+                    />
+            </LinearLayout>
+
+            <!-- NOMBRE -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxCornerRadiusTopStart="@dimen/login_input_radius"
+                app:boxCornerRadiusTopEnd="@dimen/login_input_radius"
+                app:boxCornerRadiusBottomStart="@dimen/login_input_radius"
+                app:boxCornerRadiusBottomEnd="@dimen/login_input_radius"
+                app:startIconDrawable="@drawable/ic_person"
+                app:boxStrokeColor="@color/color_rojo_principal"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputNombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_nombre"
+                    android:inputType="textPersonName"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- EMAIL -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                app:boxCornerRadiusTopStart="@dimen/login_input_radius"
+                app:boxCornerRadiusTopEnd="@dimen/login_input_radius"
+                app:boxCornerRadiusBottomStart="@dimen/login_input_radius"
+                app:boxCornerRadiusBottomEnd="@dimen/login_input_radius"
+                app:startIconDrawable="@drawable/ic_mail"
+                app:boxStrokeColor="@color/color_rojo_principal"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_email_registro"
+                    android:inputType="textEmailAddress"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- PASSWORD -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                app:boxCornerRadiusTopStart="@dimen/login_input_radius"
+                app:boxCornerRadiusTopEnd="@dimen/login_input_radius"
+                app:boxCornerRadiusBottomStart="@dimen/login_input_radius"
+                app:boxCornerRadiusBottomEnd="@dimen/login_input_radius"
+                app:startIconDrawable="@drawable/ic_lock"
+                app:endIconMode="password_toggle"
+                app:boxStrokeColor="@color/color_rojo_principal"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_password_registro"
+                    android:inputType="textPassword"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- CONFIRMAR PASSWORD -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                app:boxCornerRadiusTopStart="@dimen/login_input_radius"
+                app:boxCornerRadiusTopEnd="@dimen/login_input_radius"
+                app:boxCornerRadiusBottomStart="@dimen/login_input_radius"
+                app:boxCornerRadiusBottomEnd="@dimen/login_input_radius"
+                app:startIconDrawable="@drawable/ic_lock"
+                app:endIconMode="password_toggle"
+                app:boxStrokeColor="@color/color_rojo_principal"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputConfirmPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_confirmar_password"
+                    android:inputType="textPassword"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- BOTON CREAR CUENTA -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCrearCuenta"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/login_button_height"
+                android:layout_marginTop="20dp"
+                android:text="@string/boton_crear_cuenta"
+                android:textStyle="bold"
+                app:icon="@drawable/flecha"
+                app:iconGravity="textEnd"
+                app:cornerRadius="@dimen/login_input_radius"
+                app:backgroundTint="@color/color_rojo_principal"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtCambiarModo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="24dp"
+            android:text="@string/ya_tienes_cuenta"
+            android:textColor="@color/color_texto_gris_claro"
+            android:textSize="13sp"/>
+
+    </LinearLayout>
+</ScrollView>

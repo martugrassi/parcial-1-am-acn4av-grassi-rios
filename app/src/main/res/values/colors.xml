@@ -1,4 +1,5 @@
 <resources>
+    <!-- BASE -->
     <color name="color_fondo_app">#F3F3F3</color>
     <color name="color_negro">#000000</color>
     <color name="color_blanco">#FFFFFF</color>
@@ -6,4 +7,10 @@
     <color name="color_texto_principal">#111111</color>
     <color name="color_texto_secundario">#333333</color>
     <color name="color_placeholder">#999999</color>
+
+    <!-- MARCA / LOGIN -->
+    <color name="color_rojo_principal">#E53935</color>
+    <color name="color_rojo_oscuro">#C62828</color>
+    <color name="color_borde">#E0E0E0</color>
+    <color name="color_texto_gris_claro">#8A8A8A</color>
 </resources>

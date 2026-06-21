@@ -24,4 +24,15 @@
     <dimen name="text_nav_size">11sp</dimen>
     <dimen name="text_product_size">14sp</dimen>
 
+    <!-- LOGIN -->
+    <dimen name="login_header_height">220dp</dimen>
+    <dimen name="login_logo_size">90dp</dimen>
+    <dimen name="login_card_radius">20dp</dimen>
+    <dimen name="login_input_radius">14dp</dimen>
+    <dimen name="login_button_height">52dp</dimen>
+    <dimen name="login_social_button_height">48dp</dimen>
+    <dimen name="text_title_size">22sp</dimen>
+    <dimen name="text_subtitle_size">13sp</dimen>
+    <dimen name="text_logo_size">26sp</dimen>
+
 </resources>

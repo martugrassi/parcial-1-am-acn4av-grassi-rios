@@ -16,4 +16,28 @@
     <string name="carrito">Carrito</string>
     <string name="buscar">Buscar</string>
     <string name="ubicacion">Ubicación</string>
-</resources>
+
+    <!-- LOGIN -->
+    <string name="bienvenida_login">¡Bienvenido a FitMarket!</string>
+    <string name="subtitulo_login">Inicia sesión o crea tu cuenta para continuar</string>
+    <string name="tab_iniciar_sesion">INICIAR SESIÓN</string>
+    <string name="tab_crear_cuenta">CREAR CUENTA</string>
+    <string name="hint_email">Correo electrónico</string>
+    <string name="hint_password">Contraseña</string>
+    <string name="olvidaste_contrasena">¿Olvidaste tu contraseña?</string>
+    <string name="boton_iniciar_sesion">INICIAR SESIÓN</string>
+    <string name="continua_con">O continúa con</string>
+    <string name="no_tienes_cuenta">¿No tienes cuenta? Crear cuenta</string>
+
+
+    <!-- REGISTRO -->
+<string name="bienvenida_registro">¡Creá tu cuenta!</string>
+<string name="subtitulo_registro">Completá tus datos para empezar</string>
+<string name="hint_nombre">Nombre completo</string>
+<string name="hint_email_registro">Correo electrónico</string>
+<string name="hint_password_registro">Contraseña</string>
+<string name="hint_confirmar_password">Confirmar contraseña</string>
+<string name="boton_crear_cuenta">CREAR CUENTA</string>
+<string name="ya_tienes_cuenta">¿Ya tenés cuenta? Iniciar sesión</string>
+
+    </resources>
