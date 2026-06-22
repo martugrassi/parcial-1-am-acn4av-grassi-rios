@@ -3,6 +3,7 @@ package com.example.parcial_1_am_acn4av_grassi_rios;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -37,6 +38,8 @@ public class RegisterActivity extends AppCompatActivity {
         TextView tabLogin = findViewById(R.id.tabLogin);
         TextView txtCambiarModo = findViewById(R.id.txtCambiarModo);
 
+        UsuarioDBHelper dbHelper = new UsuarioDBHelper(this);
+
         btnCrearCuenta.setOnClickListener(v -> {
             String nombre = inputNombre.getText() != null ? inputNombre.getText().toString().trim() : "";
             String email = inputEmail.getText() != null ? inputEmail.getText().toString().trim() : "";
@@ -64,9 +67,15 @@ public class RegisterActivity extends AppCompatActivity {
 
             if (!valido) return;
 
-            // Acá iría la lógica de registro real (Firebase, API, etc.)
-            Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
-            startActivity(intent);
+            boolean registrado = dbHelper.registrarUsuario(nombre, email, pass);
+
+            if (!registrado) {
+                inputEmail.setError("Ese correo ya está registrado");
+                return;
+            }
+
+            Toast.makeText(this, "Cuenta creada con éxito", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
             finish();
         });
 
