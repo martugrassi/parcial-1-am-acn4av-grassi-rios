@@ -22,14 +22,15 @@
 
             <ImageView
                 android:id="@+id/imgLogo"
-                android:layout_width="130dp"
-                android:layout_height="130dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:layout_gravity="center_horizontal|bottom"
-                android:layout_marginBottom="-50dp"
+                android:layout_marginBottom="-10dp"
                 android:elevation="8dp"
                 android:background="@drawable/bg_circulo_blanco"
-                android:padding="12dp"
-                android:scaleType="fitCenter"
+                android:clipToOutline="true"
+                android:padding="0dp"
+                android:scaleType="centerCrop"
                 android:src="@drawable/logo9" />
 
             <ImageView
@@ -132,7 +133,7 @@
                 app:boxCornerRadiusTopEnd="@dimen/login_input_radius"
                 app:boxCornerRadiusBottomStart="@dimen/login_input_radius"
                 app:boxCornerRadiusBottomEnd="@dimen/login_input_radius"
-                app:startIconDrawable="@drawable/ic_lock"
+                app:startIconDrawable="@drawable/ic_lock_small"
                 app:endIconMode="password_toggle"
                 app:boxStrokeColor="@color/color_rojo_principal">
 
