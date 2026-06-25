@@ -59,8 +59,6 @@ public class LoginActivity extends AppCompatActivity {
         TextView tabRegistro = findViewById(R.id.tabRegistro);
         TextView txtCambiarModo = findViewById(R.id.txtCambiarModo);
 
-        // Base de datos local
-        UsuarioDBHelper dbHelper = new UsuarioDBHelper(this);
 
         // Firebase + Google Sign-In
         firebaseAuth = FirebaseAuth.getInstance();
@@ -89,7 +87,7 @@ public class LoginActivity extends AppCompatActivity {
             googleLauncher.launch(signInIntent);
         });
 
-        // Login con email/contraseña local
+        // Login con Firebase email/contraseña
         btnLoginPrincipal.setOnClickListener(v -> {
             String email = inputEmail.getText() != null ? inputEmail.getText().toString().trim() : "";
             String pass = inputPassword.getText() != null ? inputPassword.getText().toString().trim() : "";
@@ -100,14 +98,26 @@ public class LoginActivity extends AppCompatActivity {
                 return;
             }
 
-            if (!dbHelper.validarLogin(email, pass)) {
-                inputPassword.setError("Correo o contraseña incorrectos");
-                Toast.makeText(this, "Usuario o contraseña incorrectos", Toast.LENGTH_SHORT).show();
-                return;
-            }
+            firebaseAuth.signInWithEmailAndPassword(email, pass)
+                    .addOnCompleteListener(this, task -> {
+                        if (task.isSuccessful()) {
+                            Toast.makeText(
+                                    LoginActivity.this,
+                                    "Inicio de sesión exitoso",
+                                    Toast.LENGTH_SHORT
+                            ).show();
 
-            startActivity(new Intent(LoginActivity.this, MainActivity.class));
-            finish();
+                            startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                            finish();
+                        } else {
+                            inputPassword.setError("Correo o contraseña incorrectos");
+                            Toast.makeText(
+                                    LoginActivity.this,
+                                    "Error: " + task.getException().getMessage(),
+                                    Toast.LENGTH_LONG
+                            ).show();
+                        }
+                    });
         });
 
         // Navegar a Registro

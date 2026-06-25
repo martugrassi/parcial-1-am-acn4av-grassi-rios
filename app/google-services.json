@@ -1,44 +1,26 @@
 {
   "project_info": {
-    "project_number": "597018930760",
-    "project_id": "fitmarket-d02e8",
-    "storage_bucket": "fitmarket-d02e8.firebasestorage.app"
+    "project_number": "651749287127",
+    "project_id": "fitmarket-parcial2",
+    "storage_bucket": "fitmarket-parcial2.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:597018930760:android:61465fb354585b10b0727d",
+        "mobilesdk_app_id": "1:651749287127:android:e1489ddd96977292dfbc92",
         "android_client_info": {
           "package_name": "com.example.parcial_1_am_acn4av_grassi_rios"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "597018930760-do3v4j1s768n3rvm7kmot73j0c4te6dt.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.parcial_1_am_acn4av_grassi_rios",
-            "certificate_hash": "c036213e410f6eef08161786464ca73150aeff72"
-          }
-        },
-        {
-          "client_id": "597018930760-onp4bov8vb2abis1ap1ihp22d6cha4td.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBMxW6pZPb86V3FZ5CHGFduwYLob7LjVAE"
+          "current_key": "AIzaSyDSRk5I8UFDa5FpEfnJY2U9u13gBbsxhPk"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "597018930760-onp4bov8vb2abis1ap1ihp22d6cha4td.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "other_platform_oauth_client": []
         }
       }
     }

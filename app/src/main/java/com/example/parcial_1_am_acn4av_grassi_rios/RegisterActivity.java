@@ -13,14 +13,17 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class RegisterActivity extends AppCompatActivity {
-
+    private FirebaseAuth firebaseAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_register);
+        firebaseAuth = FirebaseAuth.getInstance();
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -37,8 +40,6 @@ public class RegisterActivity extends AppCompatActivity {
 
         TextView tabLogin = findViewById(R.id.tabLogin);
         TextView txtCambiarModo = findViewById(R.id.txtCambiarModo);
-
-        UsuarioDBHelper dbHelper = new UsuarioDBHelper(this);
 
         btnCrearCuenta.setOnClickListener(v -> {
             String nombre = inputNombre.getText() != null ? inputNombre.getText().toString().trim() : "";
@@ -67,16 +68,27 @@ public class RegisterActivity extends AppCompatActivity {
 
             if (!valido) return;
 
-            boolean registrado = dbHelper.registrarUsuario(nombre, email, pass);
+            firebaseAuth.createUserWithEmailAndPassword(email, pass)
+                    .addOnCompleteListener(this, task -> {
+                        if (task.isSuccessful()) {
 
-            if (!registrado) {
-                inputEmail.setError("Ese correo ya está registrado");
-                return;
-            }
+                            Toast.makeText(
+                                    RegisterActivity.this,
+                                    "Cuenta creada con éxito",
+                                    Toast.LENGTH_SHORT
+                            ).show();
 
-            Toast.makeText(this, "Cuenta creada con éxito", Toast.LENGTH_SHORT).show();
-            startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
-            finish();
+                            startActivity(new Intent(RegisterActivity.this, MainActivity.class));
+                            finish();
+                        } else {
+                            inputEmail.setError("No se pudo crear la cuenta");
+                            Toast.makeText(
+                                    RegisterActivity.this,
+                                    "Error: " + task.getException().getMessage(),
+                                    Toast.LENGTH_LONG
+                            ).show();
+                        }
+                    });
         });
 
         // Volver al login
