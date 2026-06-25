@@ -78,7 +78,15 @@ public class RegisterActivity extends AppCompatActivity {
                                     Toast.LENGTH_SHORT
                             ).show();
 
-                            startActivity(new Intent(RegisterActivity.this, MainActivity.class));
+                            firebaseAuth.signOut();
+
+                            Toast.makeText(
+                                    RegisterActivity.this,
+                                    "Cuenta creada con éxito. Iniciá sesión para continuar.",
+                                    Toast.LENGTH_SHORT
+                            ).show();
+
+                            startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
                             finish();
                         } else {
                             inputEmail.setError("No se pudo crear la cuenta");

@@ -20,6 +20,8 @@ import android.widget.TextView;
 import android.content.res.ColorStateList;
 import android.view.ViewGroup;
 import java.util.HashMap;
+import android.widget.PopupMenu;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
     private HashMap<String, Button> botonesAgregar = new HashMap<>();
@@ -101,11 +103,51 @@ public class MainActivity extends AppCompatActivity {
 
 // HEADER
 
-        imgMenu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Menú principal", Toast.LENGTH_SHORT).show();
-            }
+        imgMenu.setOnClickListener(v -> {
+
+            PopupMenu popupMenu = new PopupMenu(MainActivity.this, imgMenu);
+
+            popupMenu.getMenu().add("Tu perfil");
+            popupMenu.getMenu().add("Cerrar sesión");
+
+            popupMenu.setOnMenuItemClickListener(item -> {
+
+                if (item.getTitle().equals("Tu perfil")) {
+
+                    Toast.makeText(
+                            MainActivity.this,
+                            "Próximamente podrás editar tu perfil",
+                            Toast.LENGTH_SHORT
+                    ).show();
+
+                    return true;
+                }
+
+                if (item.getTitle().equals("Cerrar sesión")) {
+
+                    FirebaseAuth.getInstance().signOut();
+
+                    Toast.makeText(
+                            MainActivity.this,
+                            "Sesión cerrada correctamente",
+                            Toast.LENGTH_SHORT
+                    ).show();
+
+                    Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+
+                    startActivity(intent);
+                    finish();
+
+                    return true;
+                }
+
+                return false;
+            });
+
+            popupMenu.show();
         });
 
         imgCart.setOnClickListener(new View.OnClickListener() {
